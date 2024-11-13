@@ -60,3 +60,23 @@ async function processArticle(prompt) {
     }
 }
 
+
+function saveToFile(filePath, content) {
+    try {
+        fs.writeFileSync(filePath, content, 'utf-8');
+        console.log(`Wygenerowany kod HTML został zapisany w pliku.: ${filePath}`);
+    } catch (error) {
+        console.error("Zapisanie pliku nie powiodło się.");
+    }
+}
+
+(async () => {
+    console.log("Wczytywanie artykułu...");
+    const htmlContent = await processArticle(prompt);
+
+    console.log("Zapisywanie pliku...");
+    saveToFile('artykul.html', htmlContent);
+
+    console.log("Zadanie wykonane!");
+})();
+
