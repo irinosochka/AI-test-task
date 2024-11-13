@@ -38,10 +38,10 @@ Please process this article and generate the HTML accordingly.
 async function processArticle(prompt) {
     try {
         const response = await axios.post(
-            'https://api.openai.com/v1/completions',
+            'https://api.openai.com/v1/chat/completions',
             {
                 model: 'gpt-4',
-                prompt: prompt,
+                messages: [{ role: 'user', content: prompt }],
                 max_tokens: 2000,
                 temperature: 0.7,
             },
@@ -53,9 +53,9 @@ async function processArticle(prompt) {
             }
         );
 
-        return response.data.choices[0].text.trim();
+        return response.data.choices[0].message.content.trim();
     } catch (error) {
-        console.error("Wystąpił błąd podczas łączenia z OpenAI.");
+        console.error("Wystąpił błąd podczas łączenia z OpenAI.", error.message);
         process.exit(1);
     }
 }
