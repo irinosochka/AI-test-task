@@ -18,7 +18,7 @@ function readArticle(filePath) {
     }
 }
 
-const articleText = readArticle('artykul.txt');
+const articleText = readArticle('./src/artykul.txt');
 
 const prompt = ` 
 The following is an article in Polish. Your task is to convert this article into an HTML structure with the following requirements:
@@ -84,7 +84,7 @@ function saveToFile(filePath, content) {
     const htmlContent = await processArticle(prompt);
 
     console.log("Zapisywanie pliku...");
-    saveToFile('artykul.html', htmlContent);
+    saveToFile('./src/artykul.html', htmlContent);
 
     console.log("Zadanie wykonane!");
 })();
