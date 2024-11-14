@@ -2,8 +2,7 @@
 
 ## Opis Aplikacji
 
-Aplikacja służy do przetwarzania artykułu tekstowego, który jest zapisany w pliku artykul.txt, i generowania kodu HTML, który strukturalnie przedstawia ten artykuł. Wygenerowany HTML będzie zawierał odpowiednie tagi semantyczne (<h1>, <h2>, <p>, <img>, itp.), a także tagi <figure> dla obrazów wraz z opisami generowanymi na podstawie treści artykułu. Aplikacja wykorzystuje API OpenAI do przetwarzania artykułu na HTML, a także zapisuje wynik w pliku artykul.html.
-
+Aplikacja służy do przetwarzania artykułu tekstowego, który jest zapisany w pliku artykul.txt, i generowania kodu HTML, który strukturalnie przedstawia ten artykuł. Wygenerowany HTML będzie zawierał odpowiednie tagi semantyczne. Aplikacja wykorzystuje API OpenAI do przetwarzania artykułu na HTML, a także zapisuje wynik w pliku artykul.html.
 
 ## Instrukcja uruchomienia
 
