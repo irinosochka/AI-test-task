@@ -21,17 +21,24 @@ function readArticle(filePath) {
 const articleText = readArticle('artykul.txt');
 
 const prompt = ` 
-The following is an article in Polish. Your task is to convert this article into an HTML structure. Please ensure the following:
-1. Use appropriate HTML tags to structure the content, such as <h1>, <h2>, <p>, etc., depending on the content hierarchy.
-2. Indicate where images should be added by using the <img> tag with the attribute src="image_placeholder.jpg". Include the alt attribute with a detailed prompt that can be used to generate the image.
-3. Add captions under images using the <figcaption> tag.
+The following is an article in Polish. Your task is to convert this article into an HTML structure with the following requirements:
 
-Do not include <html>, <head>, or <body> tags. Focus only on the content that should go between <body> and </body> tags in the HTML file.
+1. Use appropriate HTML tags to structure the content, such as <h1>, <h2>, <p>, etc., based on the content hierarchy. Avoid splitting sentences across multiple HTML tags or lines. Use only the headings provided in the article.
+
+2. Indicate where images should be added by using the <img> tag with the attribute src="image_placeholder.jpg". Include the alt attribute with a detailed description of each image. The description in the alt attribute should be a clear and specific prompt for generating an image using an AI generator. The description should be in English and provide enough detail for visual generation. Be sure to include relevant details, context, and any specific visual elements needed.
+
+3. Add caption under every image using the <figcaption> tag. The captions should be written in Polish and provide a short, descriptive title for the image.
+
+Important Notes:
+- Do not enclose the HTML code in an HTML block.
+- Do not include <html>, <head>, or <body> tags.
+- Focus only on the content that should go between the opening and closing <body> tags in the HTML file.
 
 Article Text:  
 ${articleText}
 
 Please process this article and generate the HTML accordingly.
+
 `;
 
 
