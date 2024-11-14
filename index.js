@@ -29,6 +29,8 @@ The following is an article in Polish. Your task is to convert this article into
 
 3. Add caption under every image using the <figcaption> tag. The captions should be written in Polish and provide a short, descriptive title for the image.
 
+4. Important: Every image must be enclosed in a <figure> tag, which should contain both the <img> and the <figcaption> elements.
+
 Important Notes:
 - Do not enclose the HTML code in an HTML block.
 - Do not include <html>, <head>, or <body> tags.
