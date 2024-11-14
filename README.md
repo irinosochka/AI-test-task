@@ -29,7 +29,7 @@ Uwaga: Zastąp twoj_klucz_api rzeczywistym kluczem API.
 Po skonfigurowaniu klucza API i przygotowaniu artykułu, uruchom aplikację za pomocą poniższego polecenia:
 
 ```bash
-node index.js
+node src/index.js
 ```
 
 ## Działanie aplikacji
